@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#hero"><img src="images/logo.png" alt="logo"></a>
+
+                <div class="navlink-wrapper" id="navlinkwrapper">
+                    <a href="#hero" class="navlink">Home</a>
+                    <a href="#about" class="navlink">About</a>
+                    <a href="#skills" class="navlink">Skills</a>
+                    <a href="#projects" class="navlink">Projects</a>
+                    <a href="#contact" class="navlink">Contact</a>
+                </div>
+
+                <img src="images/menu (1).png" id="menubutton" class="menu-btn" alt="menu">
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-card">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Hi, I'm <br> <span class="typing-name">Jun Ronald del Rosario</span></h1>
+                        <h2>Web Developer & Designer</h2>
+                        <p>
+                            I craft modern, responsive websites and love transforming ideas into
+                            interactive digital experiences. With a passion for design and
+                            development, I aim to build creative, functional, and user-friendly
+                            solutions that make a lasting impact.
+                        </p>
+                        <div class="hero-btn">
+                            <a href="#projects" class="btn"><i class="fas fa-folder-open"></i> View My Projects</a>
+                            <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contact Me</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="images/pic_ko3-removebg-preview (1).png" alt="photo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="about" class="about-section fade-in">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="images/pic ko2.1.png" alt="Jun Ronald del Rosario">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>
+                        Hi! I'm <strong>Jun Ronald del Rosario</strong>, a passionate Web Developer & Designer
+                        with a love for building modern, responsive, and user-friendly websites.
+                        I enjoy transforming ideas into interactive digital experiences and
+                        constantly learning new technologies to improve my craft.
+                    </p>
+                    <p>
+                        When I’m not coding, I like exploring design trends, experimenting with
+                        new tools, and creating projects that blend creativity and functionality.
+                    </p>
+                    <a href="#contact" class="about-btn">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section slide-left">
+            <div class="skills-header">
+                <h1>My Skills</h1>
+                <p>Programming languages and web technologies I work with.</p>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <img src="images/html5.png" alt="HTML Logo">
+                    <h3>HTML</h3>
+                    <p>Building the structure of modern web pages.</p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="images/css.png" alt="CSS Logo">
+                    <h3>CSS</h3>
+                    <p>Designing responsive, beautiful, and modern layouts.</p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="images/jss2.png" alt="JavaScript Logo">
+                    <h3>JavaScript</h3>
+                    <p>Adding interactivity and dynamic functionality.</p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="images/cpp.png" alt="C++ Logo">
+                    <h3>C++</h3>
+                    <p>High-performance programming for apps & systems.</p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="images/c.png" alt="C Logo">
+                    <h3>C</h3>
+                    <p>Fundamental programming with system-level control.</p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="images/php.png" alt="PHP Logo">
+                    <h3>PHP</h3>
+                    <p>Server-side scripting for dynamic websites.</p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="images/python.png" alt="Python Logo">
+                    <h3>Python</h3>
+                    <p>Automation, data handling, and backend development.</p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="images/c-sharp.png" alt="Python Logo">
+                    <h3>C#</h3>
+                    <p>Automation, data handling, and backend development.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects" class="project-section slide-right">
+            <div class="project-card-container">
+
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-card-front">
+                            <img src="images/proj1.png" alt="Portfolio Website" class="project-card-img">
+                            <h1>Project 1</h1>
+                            <h1>Portfolio Website</h1>
+                        </div>
+                        <div class="project-card-back">
+                            <div class="project-card-img">
+                                <img src="images/proj1.png" alt="Portfolio Website">
+                            </div>
+                            <p>A personal portfolio showcasing my skills, projects, and contact details using HTML, CSS,
+                                and JavaScript.</p>
+                            <button class="project-more" onclick="openModal('portfolioModal')">View Project</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="portfolioModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal('portfolioModal')">&times;</span>
+                        <h2>Portfolio Website</h2>
+                        <div class="group-image">
+                            <img src="images/proj1.png" alt="Portfolio Screenshot" class="modal-img">
+                            <img src="images/portfolio23.png" alt="Portfolio Screenshot" class="modal-img">
+                            <img src="images/portfolio3" alt="Portfolio Screenshot" class="modal-img">
+                        </div>
+                        <p>
+                            A responsive and modern personal portfolio website. Built using HTML, CSS, and JavaScript
+                            with smooth animations
+                            and an interactive project showcase. Designed to highlight my web development journey and
+                            professional branding.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-card-front">
+                            <img src="images/portfolio2.png" alt="E-Commerce Website" class="project-card-img">
+                            <h1>Project 2</h1>
+                            <h1>E-Commerce Website</h1>
+                        </div>
+                        <div class="project-card-back">
+                            <div class="project-card-img">
+                                <img src="images/portfolio2.png" alt="E-Commerce Website">
+                            </div>
+                            <p>Online shopping platform with product listings, cart functionality, and checkout system
+                                using PHP and MySQL.</p>
+                            <button class="project-more" onclick="openModal('ecommerceModal')">View Project</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ecommerceModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal('ecommerceModal')">&times;</span>
+                        <h2>E-Commerce Website</h2>
+                        <div class="group-image">
+                            <img src="images/ecommerce1" alt="E-Commerce Screenshot" class="modal-img">
+                            <img src="images/ecommerce2" alt="E-Commerce Screenshot" class="modal-img">
+                            <img src="images/ecommerce3.jpg" alt="E-Commerce Screenshot" class="modal-img">
+                        </div>
+                        <p>
+                            A fully functional e-commerce website with user authentication, product search, shopping
+                            cart, and checkout features.
+                            Built with PHP, MySQL, JavaScript, and Bootstrap for responsive design.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-card-front">
+                            <img src="images/blog.png" alt="Blog Platform" class="project-card-img">
+                            <h1>Project 3</h1>
+                            <h1>Blog Platform</h1>
+                        </div>
+                        <div class="project-card-back">
+                            <div class="project-card-img">
+                                <img src="images/blog.png" alt="Blog Platform">
+                            </div>
+                            <p>A full-featured blog with user login, post creation, comments, and category filtering
+                                built with Node.js.</p>
+                            <button class="project-more" onclick="openModal('blogModal')">View Project</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="blogModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal('blogModal')">&times;</span>
+                        <h2>Blog Platform</h2>
+                        <div class="group-image">
+                            <img src="images/blog1.webp" alt="Blog Screenshot" class="modal-img">
+                            <img src="images/blog2" alt="Blog Screenshot" class="modal-img">
+                            <img src="images/blog3.jpg" alt="Blog Screenshot" class="modal-img">
+                        </div>
+                        <p>
+                            A blog platform where users can register, write posts, comment, and browse by categories.
+                            Created with Node.js, Express, and MongoDB for dynamic content and scalability.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-card-front">
+                            <img src="images/weather.png" alt="Weather App" class="project-card-img">
+                            <h1>Project 4</h1>
+                            <h1>Weather App</h1>
+                        </div>
+                        <div class="project-card-back">
+                            <div class="project-card-img">
+                                <img src="images/weather.png" alt="Weather App">
+                            </div>
+                            <p>A live weather app using JavaScript and OpenWeather API to display real-time weather
+                                conditions.</p>
+                            <button class="project-more" onclick="openModal('weatherModal')">View Project</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="weatherModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal('weatherModal')">&times;</span>
+                        <h2>Weather App</h2>
+                        <div class="group-image">
+                            <img src="images/weather1.jpg" alt="Weather Screenshot" class="modal-img">
+                            <img src="images/weather2.webp" alt="Weather Screenshot" class="modal-img">
+                            <img src="images/weather3.png" alt="Weather Screenshot" class="modal-img">
+                        </div>
+                        <p>
+                            A real-time weather app showing temperature, humidity, and conditions based on user location
+                            or search.
+                            Built with JavaScript, OpenWeather API, and styled with modern UI design principles.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="testimonials" class="testimonial-section">
+            <h1>✨Testimonials✨</h1>
+            <div class="testimonial-wrapper">
+                <div class="testimonial style="--i:1">
+                    <p>"Jun’s work is truly out of this world! The attention to detail and creativity is amazing."</p>
+                    <h3>- Ajoc</h3>
+                </div>
+                <div class="testimonial style="--i:2">
+                    <p>"A reliable and passionate developer. Working with him feels like reaching for the stars!"</p>
+                    <h3>- Angel</h3>
+                </div>
+                <div class="testimonial style="--i:3">
+                    <p>"He delivered everything beyond expectations — innovative, clean, and professional."</p>
+                    <h3>- Vallega</h3>
+                </div>
+                <div class="testimonial style="--i:4">
+                    <p>"Apaka galing mo boi solid"</p>
+                    <h3>- Reyes</h3>
+                </div>
+                <div class="testimonial style="--i:5">
+                    <p>"All goods langg HAHAHA"</p>
+                    <h3>- Salameda</h3>
+                </div>
+                <div class="testimonial style="--i:6">
+                    <p>"Angas ng gawa mo pre sana di na maulit"</p>
+                    <h3>- Becamon</h3>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <h2>Contact Me</h2>
+                <p>If you’d like to work together or just say hello, feel free to send me a message!</p>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+
+
+                <div class="social-links">
+                    <p><i class="fas fa-phone"></i> <a href="tel:+639463400477">+63 912 345 6789</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+639876543210">+63 987 654 3210</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:junronald@gmail.com">junronald@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <footer class="footer">
+            <div class="footer-content">
+                <h2>Jun’s Portfolio</h2>
+                <p>Exploring creativity, technology, and design — one project at a time.</p>
+
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                </div>
+
+                <p class="footer-copy">© 2025 Jun’s Portfolio | All Rights Reserved</p>
+            </div>
+        </footer>
+
+
+
+    </main>
+
+    <script>
+        var links = document.querySelectorAll('.navlink');
+        links.forEach(element => {
+            element.addEventListener("click", function () {
+                links.forEach(el => {
+                    el.classList.remove('active');
+                });
+                element.classList.add('active');
+            });
+        });
+
+
+        function openModal(id) {
+            document.getElementById(id).style.display = "flex";
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+        window.onclick = function (e) {
+            document.querySelectorAll(".modal").forEach(modal => {
+                if (e.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+
+
+        let menubutton = document.getElementById('menubutton');
+        let navlinkwrapper = document.getElementById('navlinkwrapper');
+
+        menubutton.addEventListener('click', () => {
+            navlinkwrapper.classList.toggle('show');
+        })
+
+
+
+
+        const elements = document.querySelectorAll('.fade-in, .slide-left, .slide-right');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        elements.forEach(el => observer.observe(el));
+
+
+    </script>
+
+</body>
+
+</html>
