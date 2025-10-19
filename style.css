@@ -1,5 +1,5 @@
 body {
-  max-width: 1440px;
+  
   margin: 0 auto;
   background-image: url(images/R.jpg);
   background-size: cover;
@@ -8,9 +8,10 @@ body {
   background-position: bottom center;
   margin: 0;
   padding: 0;
+  overflow-x:hidden;
   font-family: Arial, sans-serif;
   transition: 1s ease;
-
+ 
 }
 
 html {
@@ -335,12 +336,16 @@ section {
 
 
 .skills-section {
-  width: 100%;
-  max-width: 1440px;
+
   padding: 100px 20px;
   background: linear-gradient(135deg, #1e1e2f, #2d2f5d, #4e54c8);
   text-align: center;
   color: #fff;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
 
 }
 
@@ -361,10 +366,12 @@ section {
 
 .skills-grid {
   display: grid;
-  margin-right: 30px;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  text-align: center;
+  
+  max-width: 1200px;
+   margin: 0 auto;    
+  justify-items: center; 
 }
 
 .skill-card {
@@ -375,6 +382,10 @@ section {
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
 }
 
 .skill-card:hover {
@@ -444,6 +455,7 @@ section {
   position: absolute;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
   border-radius: 15px;
   backface-visibility: hidden;
   overflow: hidden;
@@ -579,24 +591,23 @@ section {
 .testimonial-section {
   background: rgba(0, 0, 30, 0.6);
   color: #fff;
-  text-align: center;
   padding: 100px 20px;
   backdrop-filter: blur(6px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers the wrapper */
 }
-
-.testimonial-section h1 {
-  margin-bottom: 50px;
-  color: #8ab4f8;
-  text-shadow: 0 0 10px #8ab4f8;
-}
-
 
 .testimonial-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1200px; 
   margin: 0 auto;
+  justify-items: center;  
+  justify-content: center; 
 }
 
 .testimonial {
@@ -607,24 +618,32 @@ section {
   box-shadow: 0 0 15px rgba(138, 180, 248, 0.3);
   transform: translateY(40px);
   opacity: 0;
-  animation: fadeUp 4s ease-out forwards infinite alternate;
+  animation: fadeUp 4s ease-out forwards;
+  max-width: 350px; 
+  width: 100%;
 }
+
 
 .testimonial:nth-child(1) {
   animation-delay: 0.2s;
 }
+
 .testimonial:nth-child(2) {
   animation-delay: 0.4s;
 }
+
 .testimonial:nth-child(3) {
   animation-delay: 0.6s;
 }
+
 .testimonial:nth-child(4) {
   animation-delay: 0.8s;
 }
+
 .testimonial:nth-child(5) {
   animation-delay: 1s;
 }
+
 .testimonial:nth-child(6) {
   animation-delay: 1.2s;
 }
@@ -634,6 +653,7 @@ section {
     opacity: 0;
     transform: translateY(40px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -660,24 +680,33 @@ section {
 
 
 .contact-section {
-  padding: 80px 20px;
+  padding: 80px;
+  width: 100%;
   background: #f8f9fa;
+  text-align: center;
+  align-items: center; 
   text-align: center;
 }
 
 .contact-container {
-  max-width: 700px;
+  max-width: 100%;
+  width: auto;
   margin: 0 auto;
+  align-items: center; 
 }
 
 .contact-section h2 {
   margin-bottom: 10px;
+   margin-left: auto;
+  margin-right: auto;
 }
 
 .contact-section p {
   font-size: 16px;
   color: #555;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -720,6 +749,8 @@ section {
 
 .social-links {
   margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .social-links a {
@@ -754,6 +785,7 @@ section {
   padding: 60px 20px 30px;
   margin-top: 0px;
   backdrop-filter: blur(6px);
+  width: 100%;
 }
 
 .footer h2 {
@@ -898,11 +930,20 @@ section {
 
   .hero-section {
     padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero-card {
-    padding: 30px 20px;
-    text-align: center;
+    margin: 0 auto;
+    max-width: 95%;
+    overflow: hidden;
+
   }
 
   .hero-content {
@@ -912,194 +953,230 @@ section {
     gap: 20px;
   }
 
+  .hero-card,
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+
   .hero-text {
     order: 2;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+    margin: 0 auto;
   }
 
   .hero-text p {
     text-align: justify;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
   }
 
   .hero-image img {
-    width: 250px;
+    width: 80%;
+    max-width: 250px;
     height: auto;
     margin-top: 15px;
-    order: 1;
+    display: block;
+    object-fit: contain;
   }
 
-  .hero-btn {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
+.hero-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
 
-  .btn {
-    width: 80%;
-    justify-content: center;
-    padding: 10px 0;
-    font-size: 14px;
-  }
+.btn {
+  width: 80%;
+  justify-content: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
 
-  .about-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-    padding: 20px;
-  }
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
+}
 
-  .about-text {
-    max-width: 350px;
-    width: 100%;
-    text-align: justify;
-  }
+.about-text {
+  max-width: 350px;
+  width: 100%;
+  text-align: justify;
+}
 
-  .about-image img {
-    width: 250px;
-    height: auto;
-    border-radius: 10px;
-  }
+.about-image img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
 
-  .about-btn {
-    max-width: 150px;
-    text-align: center;
-    align-items: center;
-    margin-left: 30px;
-    width: 100%;
-  }
+.about-btn {
+  max-width: 150px;
+  text-align: center;
+  align-items: center;
+  margin-left: 30px;
+  width: 100%;
+}
 
-  .skills-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .skills-header {
-    order: 1;
-    text-align: center;
-    margin-bottom: 20px;
-  }
+.skills-header {
+  order: 1;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-  .skills-grid {
-    order: 2;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 25px;
-    width: 100%;
-  }
+.skills-grid {
+  order: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 25px;
+  width: 100%;
+}
 
-  .skill-card {
-    width: 85%;
-    max-width: 380px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
+.skill-card {
+  width: 85%;
+  max-width: 380px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
 
-  }
+}
 
-  .project-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.project-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .project-card-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 25px;
-    width: 100%;
-  }
+.project-card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 25px;
+  width: 100%;
+}
 
-  .project-card {
-    width: 85%;
-    max-width: 350px;
-    margin-bottom: 30px;
+.project-card {
+  width: 85%;
+  max-width: 350px;
+  margin-bottom: 30px;
+  
+}
+.project-card img {
+  max-width: 300px;
+  width: 100%;
+}
 
-  }
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
 
+.modal-content {
+  position: relative;
+  background: #fff;
+  width: 90%;
+  max-width: 350px;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  max-height: 80vh;
+}
 
+.group-image {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-  .project-card img {
-    width: 300px;
-  }
+.modal-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-  }
+.close-btn {
+  font-size: 35px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
 
-  .modal-content {
-    position: relative;
-    background: #fff;
-    width: 90%;
-    max-width: 350px;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: left;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-    overflow-y: auto;
-    max-height: 80vh;
-  }
+.testimonial-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
-  .group-image {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+.testimonial-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 25px;
+  width: 100%;
+}
 
-  .modal-img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
+.testimonial {
+  max-width: 300px;
+  width: 100%;
+}
 
-  .close-btn {
-    font-size: 35px;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
-  }
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
 
-  .testimonial-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.contact-container h2,p{
+ max-width: 600px;
+ width: 90%;  
+}
+.contact-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
 
-  .testimonial-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 25px;
-    width: 100%;
-  }
-
-  .testimonial {
-    max-width: 400px;
-    width: 100%;
-  }
-
-  .contact-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .contact-form {
-    width: 400px;
-  }
+.footer{
+  width: 100%;
+}
+.footer p, h2{
+ max-width: 400px;
+ width: 100%;
+}
 }
