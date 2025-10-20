@@ -34,7 +34,13 @@
             <div class="hero-card">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1>Hi, I'm <br> <span class="typing-name">Jun Ronald del Rosario</span></h1>
+                        <h1>
+                            Hi, I'm <br>
+                            <span class="typing-name">Jun Ronald</span><br>
+                            <span class="typing-name2">del Rosario</span>
+                        </h1>
+
+
                         <h2>Web Developer & Designer</h2>
                         <p>
                             I craft modern, responsive websites and love transforming ideas into
@@ -178,22 +184,20 @@
                     </div>
                 </div>
 
-                <div id="ecommerceModal" class="modal">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2>E-Commerce Website</h2>
-                            <span class="close-btn" onclick="closeModal('ecommerceModal')">&times;</span>
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-card-front">
+                            <img src="images/ecommerce" alt="E-commerce" class="project-card-img">
+                            <h1>Project 2</h1>
+                            <h1>Ecommerce Website</h1>
                         </div>
-                        <div class="modal-body">
-                            <div class="group-image">
-                                <img src="images/ecommerce1" alt="E-Commerce Screenshot" class="modal-img">
-                                <img src="images/ecommerce2" alt="E-Commerce Screenshot" class="modal-img">
-                                <img src="images/ecommerce3.jpg" alt="E-Commerce Screenshot" class="modal-img">
+                        <div class="project-card-back">
+                            <div class="project-card-img">
+                                <img src="images/ecommerce" alt="E-commerce">
                             </div>
-                            <p>
-                                A fully functional e-commerce website with user authentication, product search, shopping
-                                cart, and checkout features. Built with PHP, MySQL, JavaScript, and Bootstrap.
-                            </p>
+                            <p>A full-featured blog with user login, post creation, comments, and category filtering
+                                built with Node.js.</p>
+                           <button class="project-more" onclick="openModal('ecommerceModal')">View Project</button>
                         </div>
                     </div>
                 </div>
