@@ -915,6 +915,7 @@ section {
   .navlink-wrapper.show {
     max-height: 400px;
     padding: 20px;
+    width: 90%;
   }
 
   .navlink-wrapper a {
@@ -1196,15 +1197,23 @@ section {
 
   .testimonial {
     max-width: 300px;
-    width: 100%;
+    width: 50%;
+  }
+
+  .testimonial p{
+    text-align: justify;
+    width: 300px;
+  }
+  .testimonial h3{
+    text-align: center;
   }
 
   .contact-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 94.66%;
-    max-width: 789px;
+    width: 94.657%;
+    max-width: 786px;
     text-align: center;
     padding-left: 21px;
     padding-right: 21px;
