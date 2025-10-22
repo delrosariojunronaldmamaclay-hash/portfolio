@@ -10,7 +10,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: Arial, sans-serif;
-  transition: 1s ease;a
+  transition: 1s ease;
 
 }
 
@@ -30,8 +30,19 @@ nav {
   z-index: 999;
   width: 100%;
   top: 0;
+  animation: slideDown 0.8s ease-out;
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .container {
   width: 65%;
   max-width: 1140px;
@@ -47,7 +58,13 @@ nav {
   border-radius: 99px;
   padding: 20px;
   gap: 20px;
+  transition: all 0.3s ease;
 
+}
+
+.nav-wrapper:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .navlink-wrapper {
@@ -59,6 +76,7 @@ nav {
   display: none;
   width: 35px;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .navlink {
@@ -67,7 +85,12 @@ nav {
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navlink:hover {
+  color: #170ce6;
+  transform: translateY(-2px);
 }
 
 .navlink::after {
@@ -81,9 +104,6 @@ nav {
   transition: width 0.3s ease;
 }
 
-.navlink:hover {
-  color: #170ce6;
-}
 
 .navlink:hover::after {
   width: 100%;
@@ -108,6 +128,27 @@ nav {
   text-align: center;
   align-items: center;
   font-weight: 600;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.contact-link:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .contact-link:hover {
@@ -139,7 +180,20 @@ section {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: fadeInUp 1s ease-out;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 
 .hero-content {
@@ -156,8 +210,11 @@ section {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
+.typing-name,.typing-name2{
+  display: none;
+}
 
-.typing-name {
+.typing-name1 {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
@@ -168,26 +225,9 @@ section {
   animation:
     typing 3.5s steps(25, end) 0.5s forwards,
     blink 0.7s step-end infinite 0.5s,
-    stopBlink 0s linear 4.2s forwards;
+    stopBlink 0s linear 1.9s forwards;
 }
 
-
-.typing-name2 {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid #8f94fb;
-  font-weight: 700;
-  color: #8f94fb;
-  width: 0;
-  opacity: 0;
-
-  animation:
-    showLine 0s linear 4.2s forwards,
-    typing 3.5s steps(25, end) 4.7s forwards,
-    blink 0.7s step-end infinite 4.7s,
-    stopBlink 0s linear 8.3s forwards;
-}
 
 @keyframes typing {
   from {
@@ -257,12 +297,47 @@ section {
   margin-right: 15px;
 }
 
+.hero-image {
+  position: relative;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(45deg, #4e54c8, #8f94fb, #4e54c8);
+  border-radius: 10%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: rotateBorder 3s linear infinite;
+  z-index: -1;
+}
+
+.hero-image:hover::before {
+  opacity: 0.7;
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 .hero-image img {
   width: 420px;
   height: 475px;
   border-radius: 10%;
   object-fit: cover;
   transition: transform 0.4s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-image img:hover {
@@ -282,6 +357,19 @@ section {
   text-decoration: none;
   box-shadow: 0 5px 15px rgba(78, 84, 200, 0.3);
   transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
 }
 
 .btn:hover {
@@ -674,13 +762,13 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* centers the wrapper */
+  
 }
 
 .testimonial-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 65px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -817,6 +905,9 @@ section {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .contact-form button:hover {
@@ -1115,6 +1206,72 @@ section {
     width: 100%;
   }
 
+  .typing-name1{
+    display: none;
+  }
+
+
+.typing-name {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #8f94fb;
+  font-weight: 700;
+  color: #8f94fb;
+  width: 0;
+  opacity: 1;
+
+  animation:
+    typing 3.5s steps(25, end) 0.5s forwards,
+    blink 0.7s step-end infinite 0.5s,
+    stopBlink 0s linear 4.2s forwards;
+}
+
+.typing-name2 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #8f94fb;
+  font-weight: 700;
+  color: #8f94fb;
+  width: 0;
+  opacity: 0;
+
+  animation:
+    showLine 0.1s linear 4.2s forwards, 
+    typing 3.5s steps(25, end) 4.7s forwards,
+    blink 0.7s step-end infinite 4.7s,
+    stopBlink 0s linear 8.2s forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes stopBlink {
+  to {
+    border-right: none;
+  }
+}
+
+@keyframes showLine {
+  to {
+    opacity: 1;
+  }
+}
+
   .skills-section {
     display: flex;
     flex-direction: column;
@@ -1242,7 +1399,8 @@ section {
 
   .testimonial {
     max-width: 300px;
-    width: 50%;
+    width: 85%;
+    margin-bottom: 20px;
   }
 
   .testimonial p {
