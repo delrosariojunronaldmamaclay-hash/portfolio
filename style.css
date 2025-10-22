@@ -10,7 +10,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: Arial, sans-serif;
-  transition: 1s ease;
+  transition: 1s ease;a
 
 }
 
@@ -529,7 +529,7 @@ section {
   width: 100%;
   height: 250px;
   overflow: hidden;
-  margin-right: 15px;
+  margin-right: 0 auto;
 }
 
 .project-card-img img {
@@ -554,7 +554,7 @@ section {
   background: #1e40af;
 }
 
-/* ✅ Place this outside of any @media query */
+
 .modal {
   display: none;
   position: fixed;
@@ -563,7 +563,7 @@ section {
   background: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .modal.show {
@@ -582,6 +582,20 @@ section {
   position: relative;
   overflow-y: auto;
   max-height: 85vh;
+  margin: 20px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-right: 40px; 
+}
+
+.modal-header h2 {
+  margin: 0;
+  flex: 1;
 }
 
 @keyframes fadeIn {
@@ -595,9 +609,7 @@ section {
   }
 }
 
-.modal-content h2 {
-  margin-top: 0;
-}
+
 
 .group-image {
   display: flex;
@@ -614,15 +626,28 @@ section {
 }
 
 .close-btn {
-  font-size: 24px;
-  float: right;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 33px;
   cursor: pointer;
   color: #555;
   transition: 0.3s;
+  line-height: 1;
+  background: none;
+  border: none;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .close-btn:hover {
   color: #000;
+  transform: scale(1.1);
+
 }
 
 @keyframes fadeIn {
@@ -751,6 +776,7 @@ section {
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .contact-section p {
@@ -1066,7 +1092,7 @@ section {
     margin: 0 auto;
   }
 
-  .about-container {}
+  
 
   .about-text {
     max-width: 350px;
@@ -1147,48 +1173,39 @@ section {
   }
 
   .modal {
-    display: none;
     position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
     overflow-y: auto;
-    padding: 20px 30px 20px 17px;
+    padding: 10px;
   }
 
   .modal-content {
-    width: 67%;
-    padding: 15px;
-    max-height: 80vh;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    max-height: 90vh;
+    margin: auto;
   }
 
   .modal-header {
-    position: sticky;
+    position: relative;
     background: #fff;
-    padding: 15px 20px;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
+    padding: 0 40px 15px 0;
     border-bottom: 1px solid #ddd;
-    top: -15px;
+    margin-bottom: 15px;
+  }
+
+  .modal-header h2{
+    font-size: 21px;
+    margin: 0;
+    width: calc(100% - 40px);
+
   }
 
   .modal-body {
-    padding: 20px;
-    overflow-y: auto;
+    padding: 0;
+    overflow-y: visible;
   }
-  .modal h2{
-    width: 100%;
-    font-size: 21px;
-  
-  }
+ 
   .group-image {
     display: flex;
     flex-direction: column;
@@ -1202,33 +1219,10 @@ section {
   }
 
   .close-btn {
-    font-size: 28px;
     position: absolute;
-    top: 10px;
-    right: 15px;
-    z-index: 10;
-    cursor: pointer;
-  }
-
-
-  .group-image {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .modal-img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-
-  .close-btn {
+    top: 0;
+    right: 0;
     font-size: 35px;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
   }
 
   .testimonial-section {
