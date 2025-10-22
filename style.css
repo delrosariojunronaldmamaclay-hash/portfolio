@@ -1158,6 +1158,7 @@ section {
     margin-top: 15px;
     display: block;
     object-fit: contain;
+    margin-left: 14px;
   }
 
   .hero-btn {
